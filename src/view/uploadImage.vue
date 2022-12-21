@@ -8,6 +8,8 @@ export default {
 }
 </script>
 <template>
-    <h1>Upload Image</h1>
+    <div class="d-flex">
+        <h1 class="mx-auto">Upload Image</h1>
+    </div>
     <uploadImage />
 </template>
