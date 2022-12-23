@@ -2,29 +2,34 @@
   export default {
     data() {
       return {
-        info: []
+        info: [],
+        url:`http://${import.meta.env.VITE_HOST}/api/all`
       }
     },
     created() {
-      fetch('http://localhost:3000/api/all')
-        .then(res => res.json())
-        .then(data => this.info = data)
-    },
-    methods: {
-      show(){
-        console.log(this.info)
+      try{
+        fetch(this.url)
+         .then(res => res.json())
+         .then(data => this.info = data)
+      } catch(e){
+        console.log(e)
       }
-    }
+    },
   }
 </script>
 <template>
-  <button @click="show">Click</button>
-  <div class="d-flex">
-    <div class="card mx-auto my-2" v-for="item in info">
+  <div class="mx-5">
+    <div class="mx-3 d-inline-flex card my-2" v-for="item in info">
       <div class="card-body bg-light" style="width: 16rem;" :key="item.id">
         <p class="card-title">{{ item.characters }}</p>
-        <img class="img-thumbnail" :src="item.image">
+        <img id="img" class="img-thumbnail" :src="item.image">
       </div>
     </div>
   </div>
 </template>
+<style>
+#img{
+  height: 300px !important;
+  object-fit: cover !important;
+}
+</style>
