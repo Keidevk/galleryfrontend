@@ -1,7 +1,13 @@
-# Vue 3 + Vite
+#gallery frontend
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Ese proyecto va en conjunto con la api gallery haciendo uso de sus metodos podemos mostrar al usuario las diferentes fotos almacenadas en la base de datos con una caracteristica basica
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+---
+#instalacion y uso
+---
+cd ./galleryfrontend
+npm i
+npm run dev #inicia el frontend en modo desarrollador
+npm run build #crea el .dist para enviarlo a produccion
+npm run start:prod #inicia el frontend en modo produccion
+---
